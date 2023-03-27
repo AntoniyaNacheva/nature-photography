@@ -4,7 +4,7 @@
 
    In the project directory:
 	
-   ### `cd client`
+   ### `cd server`
    ### `npm start` 
 
 # Getting Started with Create React App
