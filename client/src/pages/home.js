@@ -63,9 +63,11 @@ export const Home = () => {
 								{isPhotographySaved(photography._id) ? 'Saved' : 'Save'}
 							</button>
 						</div>
+						<div>
+							<p>{photography.subject}</p>
+						</div>
 						<img src={photography.imageUrl} alt={photography.name} />
 						<p> Destination: {photography.destination} </p>
-
 					</li>
 				))}
 			</ul>
