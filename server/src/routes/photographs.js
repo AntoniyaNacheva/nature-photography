@@ -1,7 +1,7 @@
 import express from 'express';
-import mongoose from 'mongoose';
 import { PhotographyModel } from "../models/Photography.js";
 import { UserModel } from '../models/Users.js';
+import { verifyToken } from './users.js';
 
 const router = express.Router();
 
@@ -15,19 +15,19 @@ router.get("/", async (req, res) => {
 	}
 });
 
-router.post("/", async (req, res) => {
+router.post("/", verifyToken, async (req, res) => {
 	const photography = new PhotographyModel(req.body);
 
 	try {
-		await photography.save();
-		res.json(photography);
+		const response = await photography.save();
+		res.json(response);
 
 	} catch (err) {
 		res.json(err);
 	}
 });
 
-router.put("/", async (req, res) => {
+router.put("/", verifyToken, async (req, res) => {
 
 	try {
 		const photography = await PhotographyModel.findById(req.body.photographyID);

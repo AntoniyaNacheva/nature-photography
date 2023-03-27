@@ -16,11 +16,13 @@ export const Navbar = () => {
 		<div className="navbar">
 			<Link to="/">Home</Link>
 			<Link to="/create-photography">Create Photography</Link>
-			<Link to="/saved-photographs">Saved Photographs</Link>
 			{!cookies.access_token ? (
 				<Link to="/auth"> Login/Register</Link>
 			) : (
-				<button onClick={logout}> Logout </button>
+				<>
+					<Link to="/saved-photographs">Saved Photographs</Link>
+					<button onClick={logout}> Logout </button>
+				</>
 			)}
 		</div>
 	);

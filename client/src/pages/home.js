@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { getUserId } from '../hooks/getUserId';
 import axios from 'axios';
+import { useCookies } from 'react-cookie';
 
 export const Home = () => {
 	const [photographs, setPhotographs] = useState([]);
 	const [savedPhotographs, setSavedPhotographs] = useState([]);
+	const [cookies, _] = useCookies(['access_token']);
 
 	const userID = getUserId();
 
@@ -30,8 +32,10 @@ export const Home = () => {
 		};
 
 		fetchPhotography();
-		fetchSavedPhotography();
 
+		if (cookies.access_token) {
+			fetchSavedPhotography();
+		}
 	}, []);
 
 	const savePhotography = async (photographyID) => {
@@ -39,11 +43,11 @@ export const Home = () => {
 			const response = await axios.put('http://localhost:3001/photographs', {
 				photographyID,
 				userID
-			});
+			}, { headers: { authorization: cookies.access_token } });
 			setSavedPhotographs(response.data.savedPhotographs);
 
 		} catch (err) {
-			console.log(err);
+			console.error(err);
 		}
 	};
 

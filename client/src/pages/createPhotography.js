@@ -2,9 +2,11 @@ import { useState } from 'react';
 import axios from 'axios';
 import { getUserId } from '../hooks/getUserId';
 import { useNavigate } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 
 export const CreatePhotography = () => {
 	const userID = getUserId();
+	const [cookies, _] = useCookies(['access_token']);
 
 	const [photography, setPhotography] = useState({
 		name: '',
@@ -26,7 +28,8 @@ export const CreatePhotography = () => {
 	const onSubmit = async (event) => {
 		event.preventDefault();
 		try {
-			await axios.post('http://localhost:3001/photographs', photography);
+			await axios.post('http://localhost:3001/photographs', photography,
+			{ headers: { authorization: cookies.access_token } });
 			alert('Photography created!');
 			navigate('/');
 
