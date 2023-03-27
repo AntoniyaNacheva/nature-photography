@@ -61,11 +61,13 @@ export const Home = () => {
 					<li key={photography._id}>
 						<div>
 							<h2>{photography.name}</h2>
-							<button
-								onClick={() => savePhotography(photography._id)}
-								disabled={isPhotographySaved(photography._id)}>
-								{isPhotographySaved(photography._id) ? 'Saved' : 'Save'}
-							</button>
+							{cookies.access_token ? (
+								<button
+									onClick={() => savePhotography(photography._id)}
+									disabled={isPhotographySaved(photography._id)}>
+									{isPhotographySaved(photography._id) ? 'Saved' : 'Save'}
+								</button>
+							) : null}
 						</div>
 						<div>
 							<p>{photography.subject}</p>
