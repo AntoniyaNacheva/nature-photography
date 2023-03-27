@@ -21,6 +21,7 @@ export const Navbar = () => {
 			) : (
 				<>
 					<Link to="/saved-photographs">Saved Photographs</Link>
+					<Link to="/my-photographs">My Photographs</Link>
 					<button onClick={logout}> Logout </button>
 				</>
 			)}
