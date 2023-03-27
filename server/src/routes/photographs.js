@@ -42,9 +42,9 @@ router.put("/", async (req, res) => {
 	}
 });
 
-router.get("/savedPhotographs/ids", async (req, res) => {
+router.get("/savedPhotographs/ids/:userID", async (req, res) => {
 	try {
-		const user = await UserModel.findById(req.body.userID);
+		const user = await UserModel.findById(req.params.userID);
 		res.json({ savedPhotographs: user?.savedPhotographs });
 
 	} catch (err) {
