@@ -9,7 +9,11 @@ const UserSchema = new mongoose.Schema({
 	password: {
 		type: String,
 		required: true
-	}
+	},
+	savedPhotographs: [{
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "photographs"
+	}]
 });
 
 export const UserModel = mongoose.model("users", UserSchema);
