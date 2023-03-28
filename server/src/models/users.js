@@ -13,7 +13,11 @@ const UserSchema = new mongoose.Schema({
 	savedPhotographs: [{
 		type: mongoose.Schema.Types.ObjectId,
 		ref: "photographs"
-	}]
+	}],
+	myPhotographs: [{
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "photographs"
+	}],
 });
 
 export const UserModel = mongoose.model("users", UserSchema);

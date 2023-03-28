@@ -37,7 +37,7 @@ export const SavedPhotographs = () => {
 						</div>
 						<img src={photography.imageUrl} alt={photography.name} />
 						<p> Destination: {photography.destination} </p>
-
+						<button> Details </button>
 					</li>
 				))}
 			</ul>
