@@ -1,0 +1,110 @@
+import { useContext, useEffect } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useAuthContext } from '../../contexts/AuthContext';
+
+import * as photographyService from '../../services/photographyService';
+import { PhotographyContext } from '../../contexts/PhotographyContext';
+import * as commentService from '../../services/commentService';
+
+const PhotographyDetails = () => {
+    const navigate = useNavigate();
+    const { user } = useAuthContext();
+
+    const { addComment, fetchPhotographyDetails, selectPhotography, photographyRemove } = useContext(PhotographyContext);
+    const { photographyId } = useParams();
+
+    const currentPhotography = selectPhotography(photographyId);
+    const isOwner = currentPhotography._ownerId === user._id;
+
+    useEffect(() => {
+        (async () => {
+            const photographyDetails = await photographyService.getOne(photographyId);
+            const photographyComments = await commentService.getByPhotographyId(photographyId);
+
+            fetchPhotographyDetails(photographyId, { ...photographyDetails, comments: photographyComments.map(x => `${x.user.email}: ${x.text}`) });
+        })();
+    }, []);
+
+    const addCommentHandler = (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+
+        const comment = formData.get('comment');
+
+        commentService.create(photographyId, comment)
+            .then(result => {
+                addComment(photographyId, comment);
+            });
+    };
+
+    const photographyDeleteHandler = () => {
+        const confirmation = window.confirm('Are you sure you want to delete this game?');
+        if (confirmation) {
+            photographyService.remove(photographyId)
+                .then(() => {
+                    photographyRemove(photographyId);
+                    navigate('/allPhotography');
+                });
+        }
+    };
+
+    return (
+        <section id="photography-details">
+            <h1>Photography Details</h1>
+            <div className="info-section">
+                <div className="photography-header">
+                    <img className="photography-img" src={currentPhotography.imageUrl} alt="" />
+                    <h1>{currentPhotography.name}</h1>
+                    <span className="subject">Subject: {currentPhotography.subject}</span>
+                    <p className="type">{currentPhotography.destination}</p>
+                </div>
+
+
+                <div className="details-comments">
+                    <h2>Comments:</h2>
+                    <ul>
+                        {currentPhotography.comments?.map(x =>
+                            <li key={x} className="comment">
+                                <p>{x}</p>
+                            </li>
+                        )}
+                    </ul>
+
+                    {!currentPhotography.comments &&
+                        <p className="no-comment">No comments.</p>
+                    }
+                </div>
+                {isOwner &&
+                    <div className="buttons">
+                        <Link to={`/photographs/${photographyId}/edit`} className="button">
+                            Edit
+                        </Link>
+                        <button onClick={photographyDeleteHandler} className="button">
+                            Delete
+                        </button>
+                    </div>
+                }
+            </div>
+
+            <article className="create-comment">
+                <label>Add new comment:</label>
+                <form className="form" onSubmit={addCommentHandler}>
+
+                    <textarea
+                        name="comment"
+                        placeholder="Comment......"
+                    />
+
+                    <input
+                        className="btn submit"
+                        type="submit"
+                        value="Add Comment"
+                    />
+                </form>
+            </article>
+        </section>
+    );
+};
+
+export default PhotographyDetails;
