@@ -5,7 +5,7 @@
    In the project directory:
 	
    ### `cd server`
-   ### `npm start` 
+   ### `node .\server.js` 
 
 # Getting Started with Create React App
   
