@@ -37,7 +37,7 @@ const EditPhotography = () => {
                     <label htmlFor="name">Name:</label>
                     <input type="text" id="name" name="name" defaultValue={currentPhotography.name} />
                     <label htmlFor="destination">Destination:</label>
-                    <input type="text" id="subject" name="subject" defaultValue={currentPhotography.destination} />
+                    <input type="text" id="destination" name="destination" defaultValue={currentPhotography.destination} />
                     <label htmlFor="subject">Subject:</label>
                     <input
                         type="text"

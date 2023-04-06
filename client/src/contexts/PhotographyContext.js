@@ -11,7 +11,7 @@ const photographyReducer = (state, action) => {
 		case 'ADD_PHOTOGRAPHY':
 			return [...state, action.payload];
 		case 'EDIT_PHOTOGRAPHY':
-		case 'FETCH_GAME_DETAILS':
+		case 'FETCH_PHOTOGRAPHY_DETAILS':
 			return state.map(x => x._id === action.photographyId ? action.payload : x);
 		case 'ADD_COMMENT':
 			return state.map(x => x._id === action.photographyId ?
@@ -46,7 +46,7 @@ export const PhotographyProvider = ({
 
 	const fetchPhotographyDetails = (photographyId, photographyDetails) => {
 		dispatch({
-			type: 'FETCH_GAME_DETAILS',
+			type: 'FETCH_PHOTOGRAPHY_DETAILS',
 			payload: photographyDetails,
 			photographyId
 		});
