@@ -1,0 +1,48 @@
+:root {
+--color-1: rgb(240,240,216);
+--color-2: rgb(180,222,190);
+--color-3: rgb(119,204,164);
+--color-4: rgb(102,102,102); /* HEADER + TEXTS */
+--color-5: rgb(180,223,55); /* BUTTONS */
+--color-4-alpha: 102,102,102; /* HEADER */
+}
+
+.bgcolor1 {
+background-color: var(--color-1);
+}
+
+.color1 {
+color: var(--color-1);
+}
+
+.bgcolor2 {
+background-color: var(--color-2);
+}
+
+.color2 {
+color: var(--color-2);
+}
+
+.bgcolor3 {
+background-color: var(--color-3);
+}
+
+.color3 {
+color: var(--color-3);
+}
+
+.bgcolor4 {
+background-color: var(--color-4);
+}
+
+.color4 {
+color: var(--color-4);
+}
+
+.bgcolor5 {
+background-color: var(--color-5);
+}
+
+.color5 {
+color: var(--color-5);
+}

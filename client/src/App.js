@@ -13,7 +13,7 @@ import CreatePhotography from './components/CreatePhotography/CreatePhotography'
 import EditPhotography from './components/EditPhotography/EditPhotography';
 import AllPhotographs from './components/AllPhotographs/AllPhotographs';
 import PhotographyDetails from './components/PhotographyDetails/PhotographyDetails';
-import './App.css';
+import Footer from './components/Footer/Footer';
 
 const Register = lazy(() => import('./components/Register/Register'));
 
@@ -42,6 +42,8 @@ function App() {
                         </Routes>
                     </main>
                 </PhotographyProvider>
+
+                <Footer />
             </div>
         </AuthProvider>
     );

@@ -13,17 +13,17 @@ const Header = () => {
                 </Link>
             </h1>
             <nav>
-                {user.email && <span>{user.email}</span>}
+                {user.email && <span className='color2'>{user.email}</span>}
                 <Link to="/allPhotographs">All Photographs</Link>
                 {user.email
-                    ? <div id="user">
+                    ? <>
                         <Link to="/create">Create Photography</Link>
                         <Link to="/logout">Logout</Link>
-                    </div>
-                    : <div id="guest">
+                    </>
+                    : <>
                         <Link to="/login">Login</Link>
                         <Link to="/register">Register</Link>
-                    </div>
+                    </>
                 }
             </nav>
         </header>

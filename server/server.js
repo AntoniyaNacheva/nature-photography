@@ -1333,7 +1333,16 @@
         }
     };
     var seedData = {
-        photographs: {},
+        photographs: {
+            "123456789": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "photography1",
+                "desitnation": "Africa",
+                "subject": "Lion",
+                "imageUrl": "",
+                //"_createdOn": 3673673,
+            },
+        },
         comments: {}
     };
     var rules$1 = {

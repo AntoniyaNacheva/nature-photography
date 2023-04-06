@@ -51,15 +51,26 @@ const PhotographyDetails = () => {
 
     return (
         <section id="photography-details">
-            <h1>Photography Details</h1>
             <div className="info-section">
                 <div className="photography-header">
-                    <img className="photography-img" src={currentPhotography.imageUrl} alt="" />
+                    <h1>Photography Details</h1>
+                    <div>
+                        <img className="photography-img imageWidth" src={currentPhotography.imageUrl} alt="" />
+                    </div>
                     <h1>{currentPhotography.name}</h1>
                     <span className="subject">Subject: {currentPhotography.subject}</span>
                     <p className="type">{currentPhotography.destination}</p>
+                    {isOwner &&
+                        <div className="buttons">
+                            <Link to={`/photographs/${photographyId}/edit`} className="button">
+                                Edit
+                            </Link>
+                            <button onClick={photographyDeleteHandler} className="button">
+                                Delete
+                            </button>
+                        </div>
+                    }
                 </div>
-
 
                 <div className="details-comments">
                     <h2>Comments:</h2>
@@ -74,35 +85,24 @@ const PhotographyDetails = () => {
                     {!currentPhotography.comments &&
                         <p className="no-comment">No comments.</p>
                     }
+                    <article className="create-comment">
+                        <form className="form" onSubmit={addCommentHandler}>
+
+                            <textarea
+                                name="comment"
+                                placeholder="Comment......"
+                            />
+
+                            <input
+                                className="btn submit"
+                                type="submit"
+                                value="Add Comment"
+                                aria-label='comment'
+                            />
+                        </form>
+                    </article>
                 </div>
-                {isOwner &&
-                    <div className="buttons">
-                        <Link to={`/photographs/${photographyId}/edit`} className="button">
-                            Edit
-                        </Link>
-                        <button onClick={photographyDeleteHandler} className="button">
-                            Delete
-                        </button>
-                    </div>
-                }
             </div>
-
-            <article className="create-comment">
-                <label>Add new comment:</label>
-                <form className="form" onSubmit={addCommentHandler}>
-
-                    <textarea
-                        name="comment"
-                        placeholder="Comment......"
-                    />
-
-                    <input
-                        className="btn submit"
-                        type="submit"
-                        value="Add Comment"
-                    />
-                </form>
-            </article>
         </section>
     );
 };

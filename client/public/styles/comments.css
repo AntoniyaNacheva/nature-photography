@@ -1,0 +1,62 @@
+.comment p {
+    padding: 16px;
+}
+
+
+.create-comment>.button:hover {
+    background-color: #41425c;
+    color: white;
+    cursor: pointer;
+}
+
+.details-comments {
+    padding: 16px;
+    max-width: 900px;
+    flex-grow: 1;
+}
+
+.info-section>.details-comments li {
+    width: 100%;
+    display: inline-block;
+    margin: 0px auto 25px auto;
+    border-radius: 16px;
+    background: var(--color-3);
+    color: white;
+}
+
+.details-comments > ul {
+    margin: 0;
+}
+
+.details-comments > h2 {
+    padding-left: 0;
+    margin-top: 4px;
+}
+
+.create-comment>.form>textarea {
+    resize: none;
+    padding: 10px;
+}
+
+.create-comment {
+    margin-top: 60px;
+    position: relative;
+    text-align: center;
+    flex-grow: 1;
+    height: auto;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background: var(--color-3);
+}
+
+.create-comment>label {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.form {
+    padding: 10px;
+}

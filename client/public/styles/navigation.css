@@ -1,0 +1,85 @@
+body {
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.auth {
+    width: 100px;
+    margin: 8em auto;
+}
+
+.home {
+    font-size: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0;
+}
+
+#box {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    margin: 0;
+}
+
+.home:hover {
+    color: var(--color-5);
+}
+
+header,
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(var(--color-4-alpha),0.8);
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100px;
+}
+
+footer {
+    background-color: var(--color-4);
+}
+
+header {
+    position: absolute;
+    z-index: 5;
+}
+
+nav a:hover {
+    cursor: pointer;
+    color: var(--color-5);
+}
+
+header nav {
+    font-size: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav > * {
+    margin: 15px;
+}
+
+header > h1 { 
+    margin: 15px;
+    color: white;
+}
+
+#main-content {
+    flex: 1
+}
