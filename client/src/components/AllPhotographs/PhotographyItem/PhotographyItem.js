@@ -12,10 +12,7 @@ const PhotographyItem = ({ photography }) => {
                 <Link to={`/allPhotographs/${photography._id}`} className="details-button">
                     Details
                 </Link>
-
-                {/* <Link style={{ marginLeft: '150px' }} to={`/photographs/${photography._id}/edit`} className="details-button">
-                    Edit
-                </Link> */}
+                
             </div>
 
         </div>

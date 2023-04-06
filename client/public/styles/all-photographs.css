@@ -1,4 +1,4 @@
-#allPhotographs-page {
+/* #allPhotographs-page {
     background-color: transparent;
     box-shadow: 0px 0px 40px 0px;
     overflow: hidden;
@@ -6,8 +6,8 @@
     padding: 20px;
     height: auto;
     width: 900px;
-}
-
+} */
+/* 
 #allPhotographs-page>h1 {
     color: #fff;
     font-family: "Agency FB";
@@ -16,9 +16,9 @@
     margin-top: 10px;
     text-transform: uppercase;
     text-align: center;
-}
+} */
 
-.allPhotographs {
+/* .allPhotographs {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
@@ -29,7 +29,7 @@
     width: 600px auto;
     min-height: 210px;
     height: auto;
-}
+} */
 
 .allPhotographs-info {
     padding: 30px;
@@ -37,7 +37,7 @@
     width: 100%;
 }
 
-.allPhotographs-info>img {
+/* .allPhotographs-info>img {
     margin-top: -10px;
     border-radius: 50%;
     height: 140px;
@@ -47,7 +47,7 @@
     float: right;
     padding: 5px;
     width: 140px;
-}
+} */
 
 .allPhotographs-info>h6 {
     font-size: 20px;

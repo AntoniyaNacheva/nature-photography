@@ -39,7 +39,7 @@ const PhotographyDetails = () => {
     };
 
     const photographyDeleteHandler = () => {
-        const confirmation = window.confirm('Are you sure you want to delete this game?');
+        const confirmation = window.confirm('Are you sure you want to delete this photography?');
         if (confirmation) {
             photographyService.remove(photographyId)
                 .then(() => {
@@ -59,7 +59,7 @@ const PhotographyDetails = () => {
                     </div>
                     <h1>{currentPhotography.name}</h1>
                     <span className="subject">Subject: {currentPhotography.subject}</span>
-                    <p className="type">{currentPhotography.destination}</p>
+                    <p className="destination">Destination: {currentPhotography.destination}</p>
                     {isOwner &&
                         <div className="buttons">
                             <Link to={`/photographs/${photographyId}/edit`} className="button">

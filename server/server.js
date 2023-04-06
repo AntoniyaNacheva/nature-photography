@@ -1336,20 +1336,26 @@
         photographs: {
             "123456789": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "name": "Blue Bird",
-                "destination": "Africa",
-                "subject": "Bird",
-                "imageUrl": "../images/bird.jpg",
-                //"_createdOn": 3673673,
+                "name": "Light on the peaks",
+                "destination": "Canada",
+                "subject": "Moraine Lake",
+                "imageUrl": "../images/lightOnThePeaks.jpg",
             },
-            // "987654321": {
-            //     "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-            //     "name": "Wild Squirrel",
-            //     "destination": "Europe",
-            //     "subject": "Squirrel",
-            //     "imageUrl": "../images/wild-squirrel.jpg",
-                //"_createdOn": 3673673,
-            //},
+            "214365879": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "Sea of tulips",
+                "destination": "Norfolk Island",
+                "subject": "Tulips",
+                "imageUrl": "../images/tulips.jpg",
+            },
+            "987654321": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "name": "Desert textures",
+                "destination": "Saudi Arabia",
+                "subject": "Desert",
+                "imageUrl": "../images/desert.jpg",
+            },
+            // Great Ridge in Autumn / England / Great Ridge / https://images.squarespace-cdn.com/content/v1/59523d5c4c8b031b6d9dcb5b/1643227151412-KLBAYVL4GELBDNBVZIH8/peak-108.jpg?format=1500w
         },
         comments: {}
     };
