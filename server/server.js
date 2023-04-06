@@ -1336,12 +1336,20 @@
         photographs: {
             "123456789": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "name": "photography1",
-                "desitnation": "Africa",
-                "subject": "Lion",
-                "imageUrl": "",
+                "name": "Blue Bird",
+                "destination": "Africa",
+                "subject": "Bird",
+                "imageUrl": "../images/bird.jpg",
                 //"_createdOn": 3673673,
             },
+            // "987654321": {
+            //     "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+            //     "name": "Wild Squirrel",
+            //     "destination": "Europe",
+            //     "subject": "Squirrel",
+            //     "imageUrl": "../images/wild-squirrel.jpg",
+                //"_createdOn": 3673673,
+            //},
         },
         comments: {}
     };
