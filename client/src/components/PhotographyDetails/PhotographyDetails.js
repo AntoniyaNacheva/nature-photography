@@ -44,7 +44,7 @@ const PhotographyDetails = () => {
             photographyService.remove(photographyId)
                 .then(() => {
                     photographyRemove(photographyId);
-                    navigate('/allPhotography');
+                    navigate('/allPhotographs');
                 });
         }
     };
