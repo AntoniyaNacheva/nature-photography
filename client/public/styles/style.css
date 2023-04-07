@@ -1,9 +1,9 @@
-@import "typography.css";
-@import "details.css";
-@import "login-register.css";
-@import "create-edit.css";
-@import "home.css";
 @import "all-photographs.css";
-@import "navigation.css";
-@import "comments.css";
 @import "colors.css";
+@import "comments.css";
+@import "details.css";
+@import "footer.css";
+@import "home.css";
+@import "login-register.css";
+@import "navigation.css";
+@import "typography.css";
