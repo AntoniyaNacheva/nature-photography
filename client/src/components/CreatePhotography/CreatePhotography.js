@@ -18,7 +18,8 @@ const CreatePhotography = () => {
     };
 
     return (
-        <section id="create-page" className="auth">
+        <section className='loginContainer'>
+            <div className="register-page">
             <form id="create" onSubmit={onSubmit}>
                 <div className="container">
                     <h1>Create Photography</h1>
@@ -60,6 +61,7 @@ const CreatePhotography = () => {
                     />
                 </div>
             </form>
+            </div>
         </section>
     );
 };

@@ -12,8 +12,8 @@ body {
 }
 
 .home {
-    font-size: auto;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 body {
@@ -39,7 +39,7 @@ header,
 footer {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(var(--color-4-alpha),0.8);
+    background-color: rgba(var(--color-4-alpha), 0.8);
     width: 100%;
     overflow: hidden;
     color: white;
@@ -63,19 +63,19 @@ nav a:hover {
 }
 
 header nav {
-    font-size: auto;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
 
-nav > * {
+nav>* {
     margin: 15px;
 }
 
-header > h1 { 
+header>h1 {
     margin: 15px;
     color: white;
 }

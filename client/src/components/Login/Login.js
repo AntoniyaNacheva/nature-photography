@@ -27,7 +27,8 @@ const Login = () => {
     };
 
     return (
-        <section id="login-page" className="auth">
+        <section className='loginContainer'>
+            <div className="register-page">
             <form id="login" onSubmit={onSubmit}>
                 <div className="container">
                     <div className="brand-logo" />
@@ -37,17 +38,19 @@ const Login = () => {
                         type="email"
                         id="email"
                         name="email"
+                        placeholder='E-Mail'
                     />
                     <label htmlFor="login-pass">Password:</label>
-                    <input type="password" id="login-password" name="password" />
+                    <input type="password" id="login-password" name="password" placeholder='Password' />
                     <input type="submit" className="btn submit" value="Login" />
                     <p className="field">
                         <span>
-                            If you don't have profile click <Link to="/register">here</Link>
+                            <Link to="/register">Go to Register page.</Link>
                         </span>
                     </p>
                 </div>
             </form>
+            </div>
         </section>
     );
 };

@@ -28,7 +28,8 @@ const Register = ({ auth }) => {
     };
 
     return (
-        <section id="register-page" className="content auth">
+        <section className='loginContainer'>
+            <div className="register-page">
             <form id="register" onSubmit={onSubmit}>
                 <div className="container">
                     <div className="brand-logo" />
@@ -38,20 +39,21 @@ const Register = ({ auth }) => {
                         type="email"
                         id="email"
                         name="email"
-                        placeholder=""
+                        placeholder="E-mail"
                     />
                     <label htmlFor="pass">Password:</label>
-                    <input type="password" name="password" id="register-password" />
+                    <input type="password" name="password" id="register-password" placeholder='Password' />
                     <label htmlFor="con-pass">Confirm Password:</label>
-                    <input type="password" name="confirm-password" id="confirm-password" />
-                    <input className="btn submit" type="submit" defaultValue="Register" />
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder='Confirm Password'/>
+                    <input className="btn submit" type="submit" defaultValue="Register" value="Register" />
                     <p className="field">
                         <span>
-                            If you already have profile click <Link to="/login">here</Link>
+                            <Link to="/login">Go to Login page.</Link>
                         </span>
                     </p>
                 </div>
             </form>
+            </div>
         </section>
     );
 };

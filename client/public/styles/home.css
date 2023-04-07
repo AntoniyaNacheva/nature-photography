@@ -7,40 +7,6 @@
     padding-left: auto;
 }
 
-/* .photography {
-    box-shadow: 0px 0px 30px 0px;
-    margin-top: 20px;
-    padding: 50px;
-    margin-left: 50px;
-    background-position: right 35% bottom 45%;
-    box-sizing: border-box;
-    border-radius: 15px;
-    float: left;
-    height: auto;
-    color: rgb(204, 144, 131);
-} */
-
-/* .photography>h3 {
-    font-family: "Agency FB";
-    font-size: 42px;
-    font-weight: 700;
-    line-height: normal;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: all 0.5s ease-out;
-    text-align: center;
-    text-transform: uppercase;
-} */
-
-/* .photography-content>h4 {
-    color: #c2d4f8;
-    font-size: 24px;
-    text-align: center;
-    font-weight: 700;
-    line-height: normal;
-} */
-
 .rating {
     unicode-bidi: bidi-override;
     text-align: center;
@@ -63,7 +29,7 @@
     text-align: center;
     font-weight: 700;
     font-size: 60px;
-    font-family: "Agency FB";
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .welcome-message>* {
@@ -90,27 +56,21 @@
 }
 
 
-.welcome-message h2,
-.welcome-message h3 {
+.welcome-message h2{
     color: var(--color-1);
     opacity: 0.8;
-    font-size: 6rem;
-    font-weight: 400;
+    font-size: 5rem;
+    font-weight: 200;
     text-transform: uppercase;
-    font-family: "Agency FB";
+    font-family: "Courier", Times, serif;
     text-align: center;
     padding-bottom: 0;
     line-height: 1;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 
-.welcome-message h3 {
-    font-size: 7rem;
-    line-height: unset;
-}
-
 #welcome-world>#home-page {
-    min-width: 50%;
+    min-width: 40%;
     text-align: center;
 }
 
@@ -124,15 +84,8 @@
     text-align: center;
     font-weight: 700;
     font-size: 5rem;
-    font-family: "Agency FB";
+    font-family: "Courier", Times, serif;
     margin: 2rem;
-}
-
-.photosContainer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
 .photography {
@@ -146,8 +99,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 350px;
-    height: 250px;
+    height: 550px;
     overflow: hidden;
     text-align: center;
     border-radius: 10px;
@@ -155,7 +107,8 @@
 
 .image-wrap>img {
     height: 100%;
-    object-fit: scale-down;
+    width: 100%;
+    object-fit: cover;
 }
 
 .photography h3 {
@@ -171,7 +124,6 @@
 .details-btn {
     background-color: var(--color-5);
     font-size: 1.4rem;
-    width: 100%;
     color: white;
     padding: 0.9em 1.4em;
     display: inline-block;

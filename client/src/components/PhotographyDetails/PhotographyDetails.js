@@ -56,10 +56,19 @@ const PhotographyDetails = () => {
                     <h1>Photography Details</h1>
                     <div>
                         <img className="photography-img imageWidth" src={currentPhotography.imageUrl} alt="" />
-                    </div>
-                    <h1>{currentPhotography.name}</h1>
-                    <span className="subject">Subject: {currentPhotography.subject}</span>
-                    <p className="destination">Destination: {currentPhotography.destination}</p>
+                        </div>
+            <h2>Name</h2>
+            <p>{currentPhotography.name}</p>
+            <div className='divider'></div>
+            <h2>Destination</h2>
+            <p>{currentPhotography.destination}</p>
+            <div className='divider'></div>
+            <div className='btngrp'>
+            <div>
+            <h2>Subject</h2>
+            <p>{currentPhotography.subject}</p>
+            </div>
+
                     {isOwner &&
                         <div className="buttons">
                             <Link to={`/photographs/${photographyId}/edit`} className="button">
@@ -70,6 +79,7 @@ const PhotographyDetails = () => {
                             </button>
                         </div>
                     }
+            </div>
                 </div>
 
                 <div className="details-comments">

@@ -56,3 +56,8 @@ h6 {
     padding: 0.2em 1rem;
     color: var(--color-4);
 }
+
+p {
+    color: var(--color-4);
+    padding: 0.2em 1rem;
+}
