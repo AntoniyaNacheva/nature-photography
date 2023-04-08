@@ -37,10 +37,10 @@ export const useAuthContext = () => {
 
 // With Higher-Order Component
 export const withAuth = (Component) => {
-	const WrapperComponent = (props) => {
+	const AuthDecorator = (props) => {
 		const context = useContext(AuthContext);
 		return <Component {...props} auth={context} />;
 	};
 
-	return WrapperComponent;
+	return AuthDecorator;
 };
