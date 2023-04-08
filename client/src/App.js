@@ -30,7 +30,7 @@ function App() {
                             <Route path="/" element={<Home />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={
-                                <Suspense fallback={<span>Loading....</span>}>
+                                <Suspense fallback={<span>Loading...</span>}>
                                     <Register />
                                 </Suspense>
                             } />

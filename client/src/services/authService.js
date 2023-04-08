@@ -1,8 +1,8 @@
-import * as request from './requestService';
+import * as request from '../utils/requestUtil';
 
 const baseUrl = 'http://localhost:3030/users';
 
-export const login = (email, password) => 
+export const login = (email, password) =>
     request.post(`${baseUrl}/login`, { email, password });
 
 
@@ -14,6 +14,8 @@ export const logout = async (accessToken) => {
             }
         });
 
+        localStorage.clear();
+
         return response;
     } catch (error) {
         console.log(error);
@@ -21,4 +23,4 @@ export const logout = async (accessToken) => {
 };
 
 export const register = (email, password) =>
-    request.post(`${baseUrl}/register`, {email, password});
+    request.post(`${baseUrl}/register`, { email, password });

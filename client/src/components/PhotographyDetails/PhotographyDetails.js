@@ -95,12 +95,13 @@ const PhotographyDetails = () => {
                     {!currentPhotography.comments &&
                         <p className="no-comment">No comments.</p>
                     }
+                    
                     <article className="create-comment">
                         <form className="form" onSubmit={addCommentHandler}>
 
                             <textarea
                                 name="comment"
-                                placeholder="Comment......"
+                                placeholder="Comment..."
                             />
 
                             <input

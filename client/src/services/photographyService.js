@@ -1,4 +1,4 @@
-import * as request from './requestService';
+import * as request from '../utils/requestUtil';
 
 const baseUrl = 'http://localhost:3030/data/photographs';
 

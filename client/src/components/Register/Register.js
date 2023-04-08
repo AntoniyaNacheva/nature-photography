@@ -45,7 +45,7 @@ const Register = ({ auth }) => {
                     <input type="password" name="password" id="register-password" placeholder='Password' />
                     <label htmlFor="con-pass">Confirm Password:</label>
                     <input type="password" name="confirm-password" id="confirm-password" placeholder='Confirm Password'/>
-                    <input className="btn submit" type="submit" defaultValue="Register" value="Register" />
+                    <input className="btn submit" type="submit" value="Register" />
                     <p className="field">
                         <span>
                             <Link to="/login">Go to Login page.</Link>
