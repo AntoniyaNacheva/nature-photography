@@ -105,3 +105,13 @@ label[for="terms"]>input {
     margin-top: 0px;
     padding: 40px;
 }
+
+.alert-danger {
+	font-size: 0.9rem;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.alert-danger {
+	margin-top: -5rem;
+  }

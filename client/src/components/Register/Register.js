@@ -17,6 +17,7 @@ const Register = ({ auth }) => {
         const confirmPassword = formData.get('confirm-password');
 
         if (password !== confirmPassword) {
+            window.alert('Passwords don\'t match');
             return;
         }
 
@@ -24,6 +25,9 @@ const Register = ({ auth }) => {
             .then(authData => {
                 auth.userLogin(authData);
                 navigate('/');
+            })
+            .catch((error) => {
+                console.log(error);
             });
     };
 

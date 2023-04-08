@@ -14,10 +14,10 @@ const Logout = () => {
                 userLogout();
                 navigate('/');
             })
-            .catch(() => {
-                navigate('/');
+            .catch((error) => {
+                console.log(error);
             });
-    });
+    }, []);
 
     return null;
 };

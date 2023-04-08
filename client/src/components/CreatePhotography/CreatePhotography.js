@@ -11,9 +11,16 @@ const CreatePhotography = () => {
 
         const photographyData = Object.fromEntries(new FormData(e.target));
 
+        if (!photographyData.name || !photographyData.destination || !photographyData.subject | !photographyData.imageUrl) {
+           return window.alert('The fields are required!');
+          }
+
         photographyService.create(photographyData)
             .then(result => {
                 photographyAdd(result);
+            })
+            .catch((error) => {
+                console.log(error);
             });
     };
 
